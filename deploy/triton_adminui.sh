@@ -7,7 +7,7 @@
 ########  Public functions #####################
 
 #domain keyfile certfile cafile fullchain
-triton_api_deploy() {
+triton_adminui_deploy() {
   _cdomain="$1"
   _ckey="$2"
   _ccert="$3"
