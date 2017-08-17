@@ -21,7 +21,7 @@ triton_docker_deploy() {
   _debug _cfullchain "$_cfullchain"
 
   _chainedcert=$(mktemp)
-  cat _ccert _cfullchain > $_chainedcert
+  cat $_ccert $_cfullchain > $_chainedcert
   _debug _chainedcert "$_chainedcert"
 
   sdcadm experimental install-docker-cert -k $_ckey -c $_chainedcert
