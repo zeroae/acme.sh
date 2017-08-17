@@ -35,9 +35,12 @@ triton_api_deploy() {
 
   # Restart the Service
   for i in 8081 8082 8083 8084; do
+      _info "Restarting cloudapi:cloudapi-$i..."
       sdc-login -l cloudapi "svcadm restart cloudapi:cloudapi-$i"
       sleep 2
   done
+
+  _info "Restarting stud..."
   sdc-login -l cloudapi "svcadm restart stud"
 
   # Print service status
