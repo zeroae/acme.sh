@@ -45,7 +45,7 @@ triton_api_deploy() {
 
   # Print service status
   _debug svcs "$(sdc-login -l cloudapi 'svcs -x')"
-  _debug certs "$(sdc-login -l cloudapi 'echo QUIT | openssl s_client -host 127.0.0.1 -port 443 -showcerts')"
+  _debug certs "$(sdc-login -l cloudapi 'echo QUIT | openssl s_client -host 127.0.0.1 -port 443 -showcerts 2>&1')"
 
   return 0
 }
